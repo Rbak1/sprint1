@@ -8,12 +8,25 @@
     <link rel="stylesheet" href="css/stylesheet.css">
 </head>
 
-<body onload="initGame()"oncontextmenu="return false">
+<body onload="initGame()" oncontextmenu="return false">
     <h1>Mine Sweeper</h1>
+    <div class="emoji"></div>
+    <div class="buttons">
+        <div id="restart" onclick="initGame()"><Button>Restart Game</Button></div>
+        <button onclick="renderLevel(BEGIN, MINEBEGIN)">Easy</button>
+        <button onclick="renderLevel(MED, MINEMED);">Medium</button>
+        <button onclick="renderLevel(EXPT, MINEEXPT);">Hard</button>
+    </div>
+
+    <div class="stopWatch">00</div>
+    <div class="lives"></div>
+    </div>
     <table>
         <tbody></tbody>
     </table>
-    <script src="js/utils.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/mines.js"></script>
+    <script src="js/utils.js"></script>
 </body>
+
 </html>
